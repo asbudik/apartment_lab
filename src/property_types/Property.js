@@ -1,4 +1,4 @@
-var Manager = require("../people/manager.js");
+// var Manager = require("../people/manager.js");
 var Unit = require("../unit.js");
 var Tenat = require("../people/tenat.js")
 
@@ -13,7 +13,6 @@ Property.prototype.setManager = function(person) {
   console.log("person.constructor: ", person.constructor);
   if (person instanceof Manager && this.manager === undefined) {
     person.addProperty(this);
-    return this.manager = person;
   } else {
     console.log("Something's wrong, choose another manager.")
   }

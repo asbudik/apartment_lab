@@ -1,5 +1,5 @@
 var Person = require("./person.js");
-var Property = require("../property_types/Property.js");
+// var Property1 = require("../property_types/Property.js");
 
 function Manager(name, contact) {
   Person.apply(this, arguments);
@@ -8,11 +8,11 @@ function Manager(name, contact) {
 
 
 Manager.prototype.addProperty = function(property) {
-  console.log("property.constructor", property.constructor)
-  if (property instanceof Property) {
+  if (property instanceof Property && property.manager === undefined) {
+    property.manager = this;
     return this.properties.push(property);
   } else {
-    console.log("That's not a real building.");
+    console.log("Something went wrong. Please choose an empty building.");
   }
 };
 
@@ -21,8 +21,6 @@ Manager.prototype.removeProperty = function(property) {
     if (this.properties[i] === property) {
       this.properties.splice(i, 1);
       property.manager = undefined;
-    } else {
-      console.log("No such property exists");
     }
     return this.properties;
   }

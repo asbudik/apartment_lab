@@ -11,7 +11,7 @@ var Property = require('./property_types/property'),
 
 var Unit = require('./unit.js');
 
-var inherit = require('./inherit.js')
+var inherit = require('./inherit.js');
 
 // start our apartment module to export later
 var App = {};
