@@ -1,9 +1,9 @@
 function Unit (number, building, sqft, rent) {
   // set params above using this
   this.tenat = null;
-  this.number = "Unit", number;
-  this.building = "Address", building;
-  this.sqft = "Square Footage:", sqft;
+  this.number = "Unit " + number;
+  this.building = "Address " + building;
+  this.sqft = "Square Footage: " + sqft;
   this.rent = "Monthly Rent: $" + rent;
 }
 

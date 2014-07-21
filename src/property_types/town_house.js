@@ -1,4 +1,4 @@
-// var Property = require("./property");
+var Property = require("./property");
 var inherit = require("../inherit.js");
 var Unit = require("../unit.js");
 

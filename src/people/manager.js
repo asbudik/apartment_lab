@@ -1,5 +1,5 @@
 var Person = require("./person.js");
-// var Property1 = require("../property_types/Property.js");
+var Property1 = require("../property_types/Property.js");
 
 function Manager(name, contact) {
   Person.apply(this, arguments);
