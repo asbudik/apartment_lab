@@ -1,8 +1,8 @@
 var prompt = require('sync-prompt').prompt;
 
 var Person = require('./people/person.js'),
-  Manager = require('./people/manager'),
-  Tenat = require('./people/tenat');
+  Manager = require('./people/manager.js'),
+  Tenat = require('./people/tenat.js');
 
 var Property = require('./property_types/property'),
   Duplex = require('./property_types/duplex.js'),
@@ -10,6 +10,8 @@ var Property = require('./property_types/property'),
   TownHouse = require('./property_types/town_house.js');
 
 var Unit = require('./unit.js');
+
+var inherit = require('./inherit.js')
 
 // start our apartment module to export later
 var App = {};

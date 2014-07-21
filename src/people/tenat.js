@@ -1,12 +1,14 @@
-var person = require("./person.js");
+var Person = require("./person.js");
 
 function Tenat(name, contact) {
-  // set this.name, and contact
+  Person.apply(this, arguments);
   this.references = [];
 };
 
 Tenat.prototype.addReference = function(reference){
-  // add reference to references
+  if (reference instanceof Person) {
+  	return this.references.push(reference);
+  }
 };
 
 module.exports = Tenat;

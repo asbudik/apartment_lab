@@ -1,11 +1,14 @@
-var property = require("./property");
+var Property = require("./property");
+var inherit = require("../inherit.js");
+var Unit = require("../unit.js");
+
 
 function TownHouse(address){
-  // only has one unit per address
+  Property.apply(this, arguments);
+  this.units.push(new Unit(1, address, 1230, 1800))
 };
 
-TownHouse.prototype.available = function(){
-  // a tenat it should not be available
-};
+
+inherit(TownHouse, Property);
 
 module.exports = TownHouse;
