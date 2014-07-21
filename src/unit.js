@@ -1,10 +1,10 @@
 function Unit (number, building, sqft, rent) {
   // set params above using this
   this.tenat = null;
-  this.number = "Unit " + number;
-  this.building = "Address " + building;
-  this.sqft = "Square Footage: " + sqft;
-  this.rent = "Monthly Rent: $" + rent;
+  this.number = number;
+  this.building = building;
+  this.sqft = sqft;
+  this.rent = rent;
 }
 
 Unit.prototype.available = function(){
