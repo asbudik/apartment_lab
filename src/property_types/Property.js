@@ -24,7 +24,7 @@ Property.prototype.getManager = function(){
 Property.prototype.addTenant = function(unit, tenat) {
   // add tenat but check to make sure there
   // is a manager first and a tenat has 2 references
-  if ( tenat.references.length > 1 && unit === null) {
+  if ( tenat.references.length > 1 && unit.tenat === null) {
     return unit.push(tenat);
   }
 };
@@ -58,6 +58,14 @@ Property.prototype.rentedUnits = function(){
   }
   return console.log("This unit has " + rentedUnitCount + 
   "units rented out.")
+}
+
+Property.prototype.chargeRent = function(unit, tenat) {
+  if (unit.tenat === tenat) {
+    tenat.money -= unit.rent;
+  } else {
+    console.log("Something went wrong");
+  }
 }
 
 

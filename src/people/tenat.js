@@ -1,8 +1,9 @@
 var Person = require("./person.js");
 
-function Tenat(name, contact) {
+function Tenat(name, contact, money) {
   Person.apply(this, arguments);
   this.references = [];
+  this.money = money;
 };
 
 Tenat.prototype.addReference = function(reference){
